@@ -33,15 +33,13 @@ public class CachingBreedFetcher implements BreedFetcher {
             return cache.get(key);
         }
 
+        callsMade++;
         try {
             // Call the underlying fetcher
             List<String> subBreeds = fetcher.getSubBreeds(breed);
-            callsMade++;
-
             // Cache the successful result
             cache.put(key, subBreeds);
             return subBreeds;
-
         } catch (BreedNotFoundException e) {
             // Do NOT cache failed results
             throw e;
