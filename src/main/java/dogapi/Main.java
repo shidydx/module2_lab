@@ -1,7 +1,5 @@
 package dogapi;
 
-import dogapi.BreedFetcher.BreedNotFoundException;
-
 import java.util.List;
 
 public class Main {
@@ -26,11 +24,8 @@ public class Main {
      * returned by the fetcher
      */
     public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher) {
-        try {
-            List<String> subBreeds = breedFetcher.getSubBreeds(breed);
-            return subBreeds == null ? 0 : subBreeds.size();
-        } catch (BreedNotFoundException e) {
-            return 0;
-        }
+        // TODO Task 3 implement this code so that it is entirely consistent with its provided documentation.
+        // return statement included so that the starter code can compile and run.
+        return -1;
     }
 }
