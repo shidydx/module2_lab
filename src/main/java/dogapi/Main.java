@@ -29,8 +29,8 @@ public class Main {
             List<String> subBreeds = breedFetcher.getSubBreeds(breed);
             return subBreeds.size();
         } catch (BreedNotFoundException e) {
-            // If the breed does not exist or API call fails, return -1
-            return -1;
+            // If the breed does not exist or API call fails, return 0
+            return 0;
         }
     }
 }
